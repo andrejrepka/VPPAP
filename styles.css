@@ -1,0 +1,358 @@
+/* Reset default margin and padding */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic body styling */
+body {
+    font-family: 'Moderustic', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #ffffff; /* White background for the whole page */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full viewport height */
+}
+
+/* Header styling */
+header {
+    background: #e0f7fa; /* Light blue background for the header */
+    color: #333;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column; /* Stack contact details above logo and navigation */
+    align-items: center; /* Center-align the content */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visibility */
+}
+
+.contact-details {
+    background: #e0f7fa; /* Slightly darker blue for the contact details background */
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-details p {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.contact-details i {
+    margin-right: 8px; /* Space between icon and text */
+    color: #0277bd; /* Darker blue color for icons */
+}
+
+.contact-details strong {
+    margin-right: 5px; /* Space between strong tag and phone/email number */
+    color: #0277bd; /* Darker blue color for labels */
+}
+
+/* Container for header and main content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.logo
+{
+    text-align: center;
+    
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header h1 {
+    margin: 0;
+    flex-grow: 1; /* Allow the title to take up available space */
+    color: #0277bd; /* Darker blue color for the title text */
+    text-align: center; /* Center the title text for mobile view */
+    font-size: 80px; /* Smaller font size for mobile */
+    font-family: 'Roboto', sans-serif;
+    font-style: oblique;
+}
+
+/* Navigation styling */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap; /* Allow wrapping of navigation items */
+    justify-content: center; /* Center-align navigation items */
+}
+
+nav ul li {
+    position: relative; /* Ensure that pseudo-elements are positioned correctly */
+    margin: 5px 10px; /* Adjust margin for mobile */
+}
+
+nav ul li:not(:last-child)::after {
+    content: '•'; /* Unicode character for a dot */
+    color: #000000; /* Blue color for the dot */
+    font-size: 20px; /* Adjust size of the dot */
+    position: absolute; /* Position dot relative to the list item */
+    right: -12px; /* Adjust this value to position the dot */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center the dot vertically */
+}
+
+nav ul li a {
+    color: #0277bd; /* Darker blue color for the navigation links */
+    text-decoration: none;
+    font-size: 24px; /* Adjust font size for mobile */
+    font-family: 'Moderustic', sans-serif;
+    transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+nav ul li a:hover {
+    color: #000000; /* Change text color to black on hover */
+}
+
+
+/* Main content styling */
+main {
+    flex: 1; /* Allow main content to expand and take up available space */
+}
+
+/* Section styling */
+section {
+    padding: 20px;
+    text-align: center; /* Center-align the text within the sections */
+}
+
+section h2 {
+    color: #0277bd; /* Darker blue color for section headers */
+    font-size: 25px; /* Adjust font size for mobile */
+}
+
+/* Box styling for paragraphs in "O nás" section */
+p {
+    text-align: center; /* Center-align the text within the paragraph */
+    padding: 10px;
+    border-radius: 8px; /* Optional: rounded corners */
+    display: inline-block; /* Make the box fit content width */
+    margin: 10px auto; /* Center the box and add margin for spacing */
+    line-height: 1.5; /* Adjust line-height for better readability */
+    max-width: 90%; /* Restrict width of the box */
+}
+
+/* Service section styling */
+.service {
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+form {
+    max-width: 600px; /* Reduce the form width */
+    margin: 0 auto; /* Center the form horizontally */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between form elements */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px; /* Space between label and input */
+    color: #0277bd; /* Darker blue color for labels */
+    font-size: 14px; /* Adjust font size for mobile */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px; /* Adjust font size for mobile */
+    width: 100%; /* Full width for inputs and textareas */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing of textarea */
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #0277bd; /* Darker blue color for the button */
+    color: #fff;
+    font-size: 14px; /* Adjust font size for mobile */
+    cursor: pointer;
+    font-family: 'Moderustic', sans-serif;
+}
+
+button:hover {
+    background-color: #01579b; /* Slightly darker blue on hover */
+}
+
+/* Footer styling */
+footer {
+    background: #b3e5fc; /* Very light blue color for the footer */
+    color: #333;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 5px; /* Adjust padding for smaller screens */
+    }
+
+    .contact-details {
+        font-size: 12px; /* Adjust font size for mobile */
+    }
+
+    .contact-details i {
+        margin-right: 6px; /* Space between icon and text */
+    }
+
+    .container {
+        width: 90%; /* Increase container width for smaller screens */
+        padding: 0;
+    }
+
+    .logo img {
+        height: 3px; /* Adjust logo size for smaller screens */
+    }
+
+    header h1 {
+        font-size: 22px; /* Smaller font size for mobile */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Adjust margin for vertical layout */
+    }
+
+    section h2 {
+        font-size: 16px; /* Smaller font size for mobile */
+    }
+
+    form {
+        padding: 0 10px; /* Add padding to the form for better spacing */
+    }
+
+    label, input[type="text"], input[type="email"], textarea, button {
+        font-size: 14px; /* Adjust font size for mobile */
+    }
+
+    button {
+        padding: 8px 12px; /* Adjust padding for button */
+    }
+}
+
+/* Service list styling */
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid layout */
+    gap: 20px; /* Space between service boxes */
+}
+
+.service {
+    border: 1px solid #ddd; /* Light gray border around each box */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    background-color: #f9f9f9; /* Light background color */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit text color */
+    display: block; /* Make the whole area clickable */
+}
+
+.service:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.service h3 {
+    font-size: 18px; /* Adjusted font size for service titles */
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.service h3 i {
+    color: #4caf50; /* Green color for checkmark */
+    margin-right: 10px; /* Space between checkmark and text */
+}
+
+.service p {
+    font-size: 14px; /* Adjusted font size for service descriptions */
+    color: #666; /* Slightly darker text color for descriptions */
+}
+
+.slider-wrapper {
+	position: relative;
+	max-width: 48rem;
+	margin: 0 auto;
+}
+
+.slider {
+	display: flex;
+	aspect-ratio: 16 / 9;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+	border-radius: 0.5rem;
+	-ms-overflow-style: none; /* Hide scrollbar IE and Edge */
+	scrollbar-width: none; /* Hide scrollbar Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.slider::-webkit-scrollbar {
+	display: none;
+}
+
+.slider img {
+	flex: 1 0 100%;
+	scroll-snap-align: start;
+	object-fit: cover;
+}
+
+.slider-nav {
+	display: flex;
+	column-gap: 1rem;
+	position: absolute;
+	bottom: 1.25rem;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1;
+}
+
+.slider-nav a {
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+	background-color: #fff;
+	opacity: 0.75;
+	transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+	opacity: 1;
+}
+
+
